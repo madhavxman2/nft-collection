@@ -9,41 +9,44 @@ Assessment Requirements
 */
 
 // create a variable to hold your NFT's
-const NFTs=[];
+const NFTS=[];
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
 function mintNFT (_name,_eyeColor,_shiftType,_bling) {
-    const NFT={
-        "name":_name,
-        "eyeColor":_eyeColor,
-        "shiftType":_shiftType,
-        "bling":_bling
-    }
-    NFTs.push(NFT);
-    console.log("Minted : \t"+_name);
+        const NFT={
+            "name":_name,
+            "eyeColor":_eyeColor,
+            "shiftType":_shiftType,
+            "bling":_bling
+        }
+        NFTS.push(NFT);
+        console.log("Minted :\t\t"+_name);
 }
 
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
 function listNFTs () {
-    for(let i=0;i<NFTs.length;i++){
-        console.log("Name : \t\t\t"+NFTs[i].name);
-        console.log("EyeColor : \t\t"+NFTs[i].eyeColor);
-        console.log("ShiftType : \t\t"+NFTs[i].shiftType);
-        console.log("Bling : \t\t"+NFTs[i].bling);
+    for(let i=0;i<NFTS.length;i++){
+        console.log("Name :\t\t\t"+NFTS[i].name);
+        console.log("EyeColor :\t\t"+NFTS[i].eyeColor);
+        console.log("ShiftType :\t\t"+NFTS[i].shiftType);
+        console.log("Bling :\t\t\t"+NFTS[i].bling);
         console.log();
     }
 }
 
 // print the total number of NFTs we have minted to the console
 function getTotalSupply() {
-    console.log(NFTs.length)
+    console.log("total NFTS = ",NFTS.length);
 }
 
 // call your functions below this line
-mintNFT("Bob","Blue","Hoodie","Gold Chain");
-mintNFT("John","Brown","Hoodie","Old Fashion");
-mintNFT("Jen","Blue","Hoodie","Gold Chain");
+
+
+mintNFT("Madhav","Brown","T-Shirt","braclet");
+mintNFT("Sunil", "Red", "Shirt", "Diamond Necklace");
+mintNFT("Ashutosh Jha", "Purple", "Jeans", "Silver Ring");
 listNFTs();
 getTotalSupply();
+
